@@ -8,7 +8,8 @@
         ------------------------------*/
         if ($(window).width() < 991) {
             navbarFix();
-        }
+		}
+
         /*------------------------------
             smoth achor effect
         ------------------------------*/
@@ -29,6 +30,21 @@
         $(".poll-btn").click(function(){
             $(".poll-wrapper").toggleClass("vote");
         });
+
+function navbarfix() {
+$(document).on('click', '.navbar-area .navbar-nav li.menu-item-has-children>a', function(e) {
+// Only prevent navigation if a submenu actually exists
+if ($(this).siblings('ul').length) {
+e.preventDefault();
+}
+});
+}
+
+
+
+
+
+
          /*----------------------
             Search Popup
         -----------------------*/
@@ -910,4 +926,5 @@
         submenuReverse()
     })
     
+
 })(jQuery);

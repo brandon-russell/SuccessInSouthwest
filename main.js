@@ -1,4 +1,3 @@
-;
 (function($) {
     "use strict";
 
@@ -8,7 +7,7 @@
             Navbar Fix
         ------------------------------*/
         if ($(window).width() < 991) {
-            navbarFix()
+            navbarFix();
         }
         /*------------------------------
             smoth achor effect
@@ -141,7 +140,7 @@
                         items: 4
                     }
                 }
-            })
+            });
          /*---------------------------
             testimonial carousel
         ---------------------------*/
@@ -664,7 +663,7 @@
             Navbar Fix
         ------------------------------*/
         if ($(window).width() < 991) {
-            navbarFix()
+            navbarFix();
         }
     });
 
@@ -680,7 +679,7 @@
         /*-----------------
             back to top
         ------------------*/
-        var backtoTop = $('.back-to-top')
+        var backtoTop = $('.back-to-top');
         backtoTop.fadeOut();
 
     });
@@ -688,7 +687,7 @@
     function navbarFix() {
         $(document).on('click', '.navbar-area .navbar-nav li.menu-item-has-children>a, .navbar-area .navbar-nav li.appside-megamenu>a', function(e) {
             e.preventDefault();
-        })
+        });
     }
 
     function StickyMenu() {
@@ -704,11 +703,11 @@
         }
         lastScrollTop = st;
     }
-    function submenuReverse() {$(window).scrollTop()
+    function submenuReverse() {$(window).scrollTop();
         if ($(window).scrollTop() > 400) {
-            $('.nav-style-03 .sub-menu').removeClass('menu-reverse')
+            $('.nav-style-03 .sub-menu').removeClass('menu-reverse');
         } else {
-            $('.nav-style-03 .sub-menu').addClass('menu-reverse')
+            $('.nav-style-03 .sub-menu').addClass('menu-reverse');
         }
     }
     /*---------------------------

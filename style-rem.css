@@ -12631,7 +12631,7 @@ input[type=checkbox] {
 }
 
 .about-us-section-area.about-bg {
-  background-image: url(assets/img/about-bg.png);
+  background-image: url(about-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

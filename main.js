@@ -1,1 +1,67 @@
-(function($){"use strict";$(document).ready(function(){if($(window).width()<991){navbarFix()}$(document).on("click",".navbar-nav li a",function(e){var anchor=$(this).attr("href");if(anchor&&anchor.startsWith("#")){e.preventDefault();$("html, body").animate({scrollTop:$(anchor).offset().top},1000);$(this).parent().addClass("current-menu-item").siblings().removeClass("current-menu-item")}});$(".poll-btn").click(function(){$(".poll-wrapper").toggleClass("vote")});var bodyOvrelay=$("#body-overlay");var searchPopup=$("#search-popup");$(document).on("click","#body-overlay, .border-none",function(e){e.preventDefault();bodyOvrelay.removeClass("active");searchPopup.removeClass("active")});$(document).on("click","#search",function(e){e.preventDefault();searchPopup.addClass("active");bodyOvrelay.addClass("active")});new WOW().init();$(".video-play,.video-popup,.small-vide-play-btn").magnificPopup({type:"video"});$(".image-popup").magnificPopup({type:"image"});$(document).on("click",".back-to-top",function(){$("html,body").animate({scrollTop:0},2000)});$(".count-num").counterUp({delay:20,time:1000});if($(".outer").length>0){VanillaTilt.init(document.querySelectorAll(".outer"),{max:80,speed:400,perspective:200,scale:1.2,reverse:true})}if($("#mycountdown").length>0){$("#mycountdown").countdown("2024/09/20",function(event){$(".month").text(event.strftime("%m"));$(".days").text(event.strftime("%n"));$(".hours").text(event.strftime("%H"));$(".mins").text(event.strftime("%M"));$(".secs").text(e
+(function($) {
+        "use strict";
+        $(document).ready(function() {
+                    if ($(window).width() < 991) {
+                        navbarFix();
+                    }
+                    $(document).on("click", ".navbar-nav li a", function(e) {
+                        var anchor = $(this).attr("href");
+                        if (anchor && anchor.startsWith("#")) {
+                            e.preventDefault();
+                            $("html, body").animate({
+                                scrollTop: $(anchor).offset().top
+                            }, 1000);
+                            $(this).parent().addClass("current-menu-item").siblings().removeClass("current-menu-item");
+                        }
+                    });
+                    $(".poll-btn").click(function() {
+                        $(".poll-wrapper").toggleClass("vote");
+                    });
+                    var bodyOvrelay = $("#body-overlay");
+                    var searchPopup = $("#search-popup");
+                    $(document).on("click", "#body-overlay, .border-none", function(e) {
+                        e.preventDefault();
+                        bodyOvrelay.removeClass("active");
+                        searchPopup.removeClass("active");
+                    });
+                    $(document).on("click", "#search", function(e) {
+                        e.preventDefault();
+                        searchPopup.addClass("active");
+                        bodyOvrelay.addClass("active");
+                    });
+                    new WOW().init();
+                    $(".video-play,.video-popup,.small-vide-play-btn").magnificPopup({
+                        type: "video"
+                    });
+                    $(".image-popup").magnificPopup({
+                        type: "image"
+                    });
+                    $(document).on("click", ".back-to-top", function() {
+                        $("html,body").animate({
+                            scrollTop: 0
+                        }, 2000);
+                    });
+                    $(".count-num").counterUp({
+                        delay: 20,
+                        time: 1000
+                    });
+                    if ($(".outer").length > 0) {
+                        VanillaTilt.init(document.querySelectorAll(".outer"), {
+                            max: 80,
+                            speed: 400,
+                            perspective: 200,
+                            scale: 1.2,
+                            reverse: true
+                        });
+                    }
+                    if ($("#mycountdown").length > 0) {
+                        $("#mycountdown").countdown("2024/09/20", function(event) {
+                                    $(".month").text(event.strftime("%m"));
+                                    $(".days").text(event.strftime("%n"));
+                                    $(".hours").text(event.strftime("%H"));
+                                    $(".mins").text(event.strftime("%M"));
+                                    $(".secs").text(event.strftime("%s"));
+                        });
+                    }
+        });
+ });

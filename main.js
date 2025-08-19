@@ -1,23 +1,25 @@
 (function($) {
-        "use strict";
-        $(document).ready(function() {
-                    if ($(window).width() < 991) {
-                        navbarFix();
-                    }
-                    $(document).on("click", ".navbar-nav li a", function(e) {
-                        var anchor = $(this).attr("href");
-                        if (anchor && anchor.startsWith("#")) {
-                            e.preventDefault();
-                            $("html, body").animate({
-                                scrollTop: $(anchor).offset().top
-                            }, 1000);
-                            $(this).parent().addClass("current-menu-item").siblings().removeClass("current-menu-item");
-                        }
-                    });
+    "use strict";
+    $(document).ready(function() {
+        if ($(window).width() < 991) {
+            navbarFix();
+        }
+        $(document).on("click", ".navbar-nav li a", function(e) {
+            var anchor = $(this).attr("href");
+            if (anchor && anchor.startsWith("#")) {
+                e.preventDefault();
+                $("html, body").animate({
+                    scrollTop: $(anchor).offset().top
+                }, 1000);
+                $(this).parent().addClass("current-menu-item").siblings().removeClass("current-menu-item");
+            }
+        });
+        
         // Poll Btn
         $(".poll-btn").click(function() {
             $(".poll-wrapper").toggleClass("vote");
         });
+        
         /*----------------------
             Search Popup
         -----------------------*/
@@ -73,6 +75,7 @@
             delay: 20,
             time: 1000
         });
+        
         // MouseEvent
         var $mosueOverEffect = $('.outer');
         if ($mosueOverEffect.length > 0) {
@@ -84,6 +87,7 @@
                 reverse: true,
             });
         }
+
         /**-----------------------------
          *  countdown
          * ---------------------------*/
@@ -105,48 +109,48 @@
                     event.strftime('%S')
                 );
             });
-
         }
-        // Clinet - active
+
+        // Client - active
         $('.client-active-area').owlCarousel({
-                loop: true,
-                items: 4,
-                nav: true,
-                margin: 100,
-                dots: false,
-                navText: ['<span data-icon="&#x23;"></span>', '<span data-icon="&#x24;"></span>'],
-                responsive: {
-                    0: {
-                        items: 2
-                    },
-                    600: {
-                        items: 3
-                    },
-                    992: {
-                        items: 4
-                    },
-                    1200: {
-                        items: 4
-                    }
+            loop: true,
+            items: 4,
+            nav: true,
+            margin: 100,
+            dots: false,
+            navText: ['<span data-icon="&#x23;"></span>', '<span data-icon="&#x24;"></span>'],
+            responsive: {
+                0: {
+                    items: 2
+                },
+                600: {
+                    items: 3
+                },
+                992: {
+                    items: 4
+                },
+                1200: {
+                    items: 4
                 }
-            });
+            }
+        });
 
-    // Menu Submenu Dropdown style
-    $(".menu-item-has-children a").on("click", function() {
-        var element = $(this).parent("li");
-        if (element.hasClass("show")) {
-            element.removeClass("show");
-            element.children("ul").slideUp(500);
-        } else {
-            element.siblings("li").removeClass('show');
-            element.addClass("show");
-            element.siblings("li").find("ul").slideUp(500);
-            element.children('ul').slideDown(500);
-        }
-    });
+        // Menu Submenu Dropdown style
+        $(".menu-item-has-children a").on("click", function() {
+            var element = $(this).parent("li");
+            if (element.hasClass("show")) {
+                element.removeClass("show");
+                element.children("ul").slideUp(500);
+            } else {
+                element.siblings("li").removeClass('show');
+                element.addClass("show");
+                element.siblings("li").find("ul").slideUp(500);
+                element.children('ul').slideDown(500);
+            }
+        });
 
-    $(window).on('scroll', function() {
-        submenuReverse();
-    });
-        
+        $(window).on('scroll', function() {
+            submenuReverse();
+        });
+    }); // This closes $(document).ready()
 })(jQuery);

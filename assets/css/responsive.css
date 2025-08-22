@@ -71,9 +71,6 @@
         max-width: 1415px;
     }
     /* Home Page Six */
-    .navbar-area .nav-container .nav-right-content .top-social-share {
-        display: none;
-    }
     .header-area.header-success.home-six {
         padding: 210px 0 130px;
     }
@@ -564,13 +561,13 @@
     .testimonial-carousel-seven .owl-nav .owl-next {
         right: 22%;
     }
-    .history-single-item + .history-single-item::after {
+    .factcheck-single-item + .factcheck-single-item::after {
         content: none;
     }
-    .history-single-item::before {
+    .factcheck-single-item::before {
         content: none;
     }
-    .history-single-item .circle {
+    .factcheck-single-item .circle {
         display: none;
     }
     .history-timeline-section .history-shape-02 {
@@ -1373,26 +1370,26 @@
     .our-journey-section .journey-bg {
        min-height: 520px; 
     }
-    .history-single-item + .history-single-item::after {
+    .factcheck-single-item + .factcheck-single-item::after {
         content: none;
     }
-    .history-single-item::before {
+    .factcheck-single-item::before {
         content: none;
     }
-    .history-single-item .circle {
+    .factcheck-single-item .circle {
         display: none;
     }
     .history-timeline-section .history-shape-02 {
         display: none;
     }
-    .history-single-item .history-single-item-content .thumb {
+    .factcheck-single-item .factcheck-single-item-content .thumb {
         background-size: cover;
-        min-height: 245px;
+        min-height: 10px;
     }
-    .history-single-item .history-year {
+    .factcheck-single-item .factcheck-decision {
         margin-left: 60px;
     }
-    .history-single-item:nth-child(2n) .history-year {
+    .factcheck-single-item:nth-child(2n) .factcheck-decision {
         margin-right: 60px;
     }
     .footer-top.style-01 {
@@ -2203,25 +2200,25 @@
         line-height: 40px;
         font-size: 20px;
     }
-    .history-slider .history-number .history-year h3 {
+    .history-slider .history-number .factcheck-decision h3 {
         font-size: 18px;
         line-height: 28px;
         margin-left: 10px;
     }
-    .history-single-item .history-year {
+    .factcheck-single-item .factcheck-decision {
         margin-left: 20px;
     }
-    .history-single-item:nth-child(2n) .history-year {
+    .factcheck-single-item:nth-child(2n) .factcheck-decision {
         margin-right: 20px;
     }
-    .history-single-item .history-single-item-content .content .title {
+    .factcheck-single-item .factcheck-single-item-content .content .title {
         font-size: 22px;
     }
-    .history-single-item .history-year .year {
+    .factcheck-single-item .factcheck-decision .decision {
         font-size: 32px;
         line-height: 42px;
     }
-    .history-single-item .history-year .month {
+    .factcheck-single-item .factcheck-decision .month {
         margin-top: 8px;
     }
     .donation-single-items .bg-wrapper .donation-bg {
@@ -3346,10 +3343,10 @@
         font-size: 34px;
         line-height: 44px;
     }
-    .history-single-item .history-year {
+    .factcheck-single-item .factcheck-decision {
         position: absolute;
         left: 68%;
-        top: 51%;
+        top: 1%;
         transform: translateY(-51%);
         margin: 0;
         animation: none;
@@ -3797,18 +3794,18 @@
         font-size: 14px;
         line-height: 24px;
     }
-    .history-slider .history-number .history-year h3 {
+    .history-slider .history-number .factcheck-decision h3 {
         margin-left: 4px;
     }
     
-    .history-single-item .history-year {
+    .factcheck-single-item .factcheck-decision {
         left: 65%;
     }
-    .history-single-item .history-year .month {
+    .factcheck-single-item .factcheck-decision .month {
         font-size: 17px;
         line-height: 27px;
     }
-    .history-single-item .history-year .year {
+    .factcheck-single-item .factcheck-decision .decision {
         font-size: 30px;
         line-height: 40px;
     }
@@ -4124,29 +4121,29 @@
     .history-slider .history-number {
         left: 14px;
     }
-    .history-slider .history-number .history-year h3 {
+    .history-slider .history-number .factcheck-decision h3 {
         margin-left: 8px;
     }
     .section-title .title {
         font-size: 32px;
         line-height: 42px;
     }
-    .history-single-item .history-year {
+    .factcheck-single-item .factcheck-decision {
         left: 62%;
-        top: 50%;
+        top: 48%;
     }
-    .history-single-item .history-year .month {
+    .factcheck-single-item .factcheck-decision .month {
         font-size: 16px;
         line-height: 26px;
     }
-    .history-single-item .history-year .year {
+    .factcheck-single-item .factcheck-decision .decision {
         font-size: 28px;
         line-height: 38px;
     }
-    .history-single-item .history-single-item-content .content .title {
+    .factcheck-single-item .factcheck-single-item-content .content .title {
         font-size: 20px;
     }
-    .history-single-item .history-single-item-content .content p {
+    .factcheck-single-item .factcheck-single-item-content .content p {
         line-height: 24px;
     }
     .progress-content .goal .raised {
@@ -4652,12 +4649,12 @@
     .slick-slider-controls {
         display: none;
     }
-    .history-slider .history-number .history-year::after  {
+    .history-slider .history-number .factcheck-decision::after  {
         content: none;
     }
-    .history-single-item .history-year {
+    .factcheck-single-item .factcheck-decision {
         left: 63%;
-        top: 50%;
+        top: 47%;
         width: 100px;
     }
     .issues-single-items .issue-img {
@@ -5077,4 +5074,15 @@
     width: 100%;
     margin-top: 10px;   /* spacing between stacked buttons */
   }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .header-logo img {
+    max-width: 80px !important;  /* smaller on mobile */
+  }
+
+   .navbar-area .nav-container .nav-right-content .top-social-share {
+        display: none;
+    }
 }

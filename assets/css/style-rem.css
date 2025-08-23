@@ -1958,6 +1958,7 @@ ul {
 }
 .party-single-item.home-six {
   padding-left: 40px;
+  
 }
 .party-single-item.home-six .content .title {
   color: #fff;
@@ -7647,7 +7648,7 @@ blockquote:not(.has-light-gray-color):not(.has-very-dark-gray-color):not(.is-sty
   content: "";
   width: 2px;
   height: 105%;
-  bottom: 58%;
+  bottom: 53%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -7656,16 +7657,15 @@ blockquote:not(.has-light-gray-color):not(.has-very-dark-gray-color):not(.is-sty
   z-index: -2;
 }
 .factcheck-single-item::before {
-  content: "";
+content: "";
   position: absolute;
+  top: 50%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  top: 45%;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   border: 2px solid var(--main-color-one);
+  transform: translate(-50%, -50%);
   z-index: -1;
 }
 .factcheck-single-item:nth-child(even) {
@@ -7683,10 +7683,10 @@ blockquote:not(.has-light-gray-color):not(.has-very-dark-gray-color):not(.is-sty
   background: var(--main-color-one);
   border-radius: 50%;
   position: absolute;
-  right: 50%;
-  top: 47%;
-  -webkit-transform: translateX(6px);
-          transform: translateX(6px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* above line and outer circle */
 }
 .factcheck-single-item .factcheck-single-item-content .thumb {
   background-repeat: no-repeat;
@@ -7733,7 +7733,7 @@ blockquote:not(.has-light-gray-color):not(.has-very-dark-gray-color):not(.is-sty
   background: var(--main-color-one);
   border-radius: 6px;
 }
-.factcheck-single-item .factcheck-decision .month {
+.factcheck-single-item .factcheck-decision .d1 {
   font-size: 1.1250rem;
   line-height: 28px;
   font-family: var(--body-font);
@@ -10181,15 +10181,16 @@ input[type=checkbox] {
   background-color: #02083D;
   padding: 90px 0px;
   margin-top: 120px;
+   display: flex;
 }
 .our-party-section-area.home-six .candidate-img-desktop {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 100%;
-  width: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+ position: absolute; 
+ left: 0; 
+ bottom: 0; 
+ height: 100%; 
+ width: 51%; 
+ -o-object-fit: cover; 
+ object-fit: contain;
 }
 
 .our-party-section-area .party-bg {
@@ -14180,16 +14181,20 @@ margin-bottom: 20px;
 }
 
 .mission-single-item {
-  background: #FFFFFF;
-  padding: 20px 30px 30px;
-  -webkit-filter: drop-shadow(0px 10px 40px rgba(0, 0, 0, 0.12));
-          filter: drop-shadow(0px 10px 40px rgba(0, 0, 0, 0.12));
-  -webkit-transition: 0.5s all ease;
-  transition: 0.5s all ease;
+    background: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;             /* softer card edges */
+  box-shadow: 0px 8px 24px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
   margin-bottom: 30px;
+  height: 100%;                    /* keeps equal card heights */
+  position: relative;
+  overflow: hidden;
 }
 .mission-single-item:hover {
   background: var(--main-color-one);
+  transform: translateY(-6px);     /* subtle lift on hover */
+  box-shadow: 0px 12px 28px rgba(0,0,0,0.18);
 }
 .mission-single-item:hover .content .content-no {
   color: #fff;
@@ -14200,6 +14205,14 @@ margin-bottom: 20px;
 .mission-single-item:hover .content p {
   color: #fff;
 }
+
+.mission-single-item:hover .content .title,
+.mission-single-item:hover p,
+.mission-single-item:hover ul li,
+.mission-single-item:hover ul li::before {
+  color: #fff; 
+}
+
 .mission-single-item:hover .progress-item .single-progressbar .percentCount {
   color: #fff;
 }
@@ -14221,13 +14234,14 @@ margin-bottom: 20px;
   transition: 0.5s all ease;
 }
 .mission-single-item .content .title {
-  font-size: 1.5000rem;
-  line-height: 1.5;
+   font-size: 1.25rem;
   font-weight: 700;
   color: var(--heading-color);
-  margin-bottom: 10px;
-  -webkit-transition: 0.5s all ease;
-  transition: 0.5s all ease;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.4s ease;
 }
 .mission-single-item .content p {
   font-size: 1.0000rem;
@@ -14251,6 +14265,15 @@ margin-bottom: 20px;
   background-color: #fff !important;
   -webkit-filter: drop-shadow(0px 3px 20px rgba(221, 19, 26, 0.3));
           filter: drop-shadow(0px 3px 20px rgba(221, 19, 26, 0.3));
+}
+
+/* ✅ checklist / icon effect */
+.mission-single-item ul li::before {
+  content: "✔";
+  color: var(--main-color-one);
+  font-weight: bold;
+  margin-right: 6px;
+  transition: color 0.4s ease;
 }
 
 #bio-section .item img{

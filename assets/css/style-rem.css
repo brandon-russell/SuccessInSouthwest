@@ -1307,6 +1307,7 @@ ul {
 }
 .btn-wrapper .boxed-btn.political-btn i {
   margin-left: 10px;
+  font-size: 1.2rem;
 }
 .btn-wrapper .boxed-btn.political-btn.style-01 {
   padding: 15px 60px;
@@ -1468,7 +1469,7 @@ ul {
   cursor: pointer;
   -webkit-box-shadow: 0 0 5px rgba(221, 19, 26, 0.5);
           box-shadow: 0 0 5px rgba(221, 19, 26, 0.5);
-  display: none;
+ display: none
 }
 
 .video-section.style-02 {
@@ -6335,8 +6336,8 @@ blockquote:not(.has-light-gray-color):not(.has-very-dark-gray-color):not(.is-sty
   z-index: 0;
 }
 blockquote:not(.has-light-gray-color):not(.has-very-dark-gray-color):not(.is-style-large):not(.is-style-large):before {
-  content: "\e921";
-  font-family: "icomoon";
+  content: "\ec58";
+  font-family: "Icons";
   font-weight: 900;
   display: block;
   position: absolute;
@@ -6352,8 +6353,8 @@ blockquote:not(.has-light-gray-color):not(.has-very-dark-gray-color):not(.is-sty
   background: #fff;
 }
 blockquote:not(.has-light-gray-color):not(.has-very-dark-gray-color):not(.is-style-large):not(.is-style-large):after {
-  content: "\e922";
-  font-family: "icomoon";
+  content: "\ec58";
+  font-family: "Icons";
   font-weight: 900;
   display: block;
   position: absolute;
@@ -8630,6 +8631,7 @@ input[type=checkbox] {
 }
 .header-area.header-success .header-inner-03 .btn-wrapper .boxed-btn.counter-btn i {
   margin-left: 10px;
+  font-size: 1.2rem;
 }
 .header-area.header-success .header-inner-02 .subtitle {
   font-size: 1.2500rem;
@@ -9362,6 +9364,7 @@ input[type=checkbox] {
 
 .navbar.navbar-area .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  font-size: 1.2rem;
 }
 
 .mobile-logo {
@@ -10005,6 +10008,8 @@ input[type=checkbox] {
     -webkit-transform: translateY(-50%);
     /* Chrome, Safari, Opera */
     transform: translateY(-50%);
+    color: #fff;
+    font-size: 1.9rem;
   }
   .navbar-area .nav-container .navbar-brand {
     display: block;
@@ -11152,7 +11157,7 @@ input[type=checkbox] {
   margin-top: 130px;
 }
 .footer-top.volunteer {
-  margin-top: 160px;
+  margin-top: 20px;
 }
 .footer-top.event-single {
   margin-top: 110px;
@@ -11715,7 +11720,7 @@ input[type=checkbox] {
   height: 32px;
   line-height: 32px;
   text-align: center;
-  font-size: 0.9375rem;
+  font-size: 1.9375rem;
   color: var(--main-color-one);
   border-radius: 5px;
   -webkit-transition: 0.3s all ease;
@@ -13228,7 +13233,7 @@ margin-bottom: 20px;
 .testimonial-carousel-five .owl-dots .owl-dot::before {
   content: "\e915";
   position: absolute;
-  font-family: "icomoon";
+  font-family: "Icons";
   font-weight: 900;
   left: 0;
   top: 0;
@@ -13241,7 +13246,7 @@ margin-bottom: 20px;
 }
 .contact_map::after {
   content: "\e91b";
-  font-family: "icomoon";
+  font-family: "Icons";
   position: absolute;
   top: 50%;
   left: 50%;

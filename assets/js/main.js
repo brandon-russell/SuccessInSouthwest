@@ -61,13 +61,20 @@
         /*------------------
             back to top
         ------------------*/
-        $(document).on('click', '.back-to-top', function() {
-            $("html,body").animate({
-                scrollTop: 0
-            }, 2000);
-        });
+        document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.querySelector(".back-to-top");
 
-        /*------------------------------
+    if (btn) {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault(); // stop the href from jumping
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth" // nice smooth scroll
+        });
+      });
+    }
+  });
+        /*-----------------------
             counter section activation
         -------------------------------*/
         var counternumber = $('.count-num');

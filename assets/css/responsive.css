@@ -5086,3 +5086,22 @@
         display: none;
     }
 }
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .factcheck-item-wrap::before {
+    left: 20px;   /* push line to left edge instead of middle */
+    transform: none;
+  }
+
+  .factcheck-single-item {
+    flex-direction: column !important;
+    align-items: flex-start; /* text and content align left */
+    text-align: left;
+    padding-left: 40px; /* so content doesn't overlap the line */
+  }
+
+  .factcheck-single-item .circle {
+    left: 20px; /* keep circle on the line */
+  }
+}
